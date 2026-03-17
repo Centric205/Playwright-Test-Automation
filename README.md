@@ -53,7 +53,7 @@ npx playwright test
 To run tests in a specific file:
 
 ```bash
-npx playwright test tests/login.spec.ts
+npx playwright test tests/loginTest.spec.ts
 ```
 
 To run tests with a specific browser (e.g., Chromium):
