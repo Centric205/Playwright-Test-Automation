@@ -10,6 +10,10 @@ export class LoginPage{
     constructor(private page: Page) {
     }
 
+    async navigateToPage(url: string){
+        await this.page.goto(url);
+    }
+
     async login(username: string, password: string){
         await this.page.fill(LoginLocators.usernameInput, username);
         await this.page.fill(LoginLocators.passwordInput, password);
