@@ -5,5 +5,7 @@ export const ProductPageLocators = {
     fleeceJacket: "#add-to-cart-sauce-labs-fleece-jacket",
     onesie: "#add-to-cart-sauce-labs-onesie",
     tshirtRed: "button[id='add-to-cart-test.allthethings()-t-shirt-(red)']",
-    productInventory: ".inventory_item_name"
+    productInventory: ".inventory_item_name",
+    productButtons: ".btn.btn_primary.btn_small.btn_inventory",
+    shoppingCartIcon: ".shopping_cart_badge"
 }

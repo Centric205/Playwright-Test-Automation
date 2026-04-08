@@ -1,9 +1,10 @@
 import {test} from "../fixtures/login_fixture";
 import {ProductPage} from "../pages/ProductPage";
 import {expect} from "@playwright/test";
+import {productName} from "../test-data/products";
 
 
-test("Add products to cart", async ({loggedInPage}) =>{
+test("Add each products to cart", async ({loggedInPage}) =>{
     const productPage = new ProductPage(loggedInPage);
     await productPage.navigateToProductPage();
     await productPage.addBackpackToCart();
@@ -21,3 +22,18 @@ test("Validate the number", async ({ loggedInPage }) => {
 
     expect(productNames.length).toEqual(6);
 });
+
+// test("Add all products", async ({loggedInPage}) =>{
+//     const productPage = new ProductPage(loggedInPage);
+//     await productPage.navigateToProductPage();
+//     await loggedInPage.waitForTimeout(3000);
+//     await productPage.addAllProductsIntoCart();
+//     console.log("Number of items in cart", productPage.getNumberOfItemInCart());
+//     expect(productPage.getNumberOfItemInCart()).toEqual("6");
+// })
+
+// test("Add specific products to Cart", async ({ loggedInPage }) => {
+//     const productPage = new ProductPage(loggedInPage);
+//     await productPage.navigateToProductPage();
+//     await productPage.addSpecificProductsToCart(productName);
+// });
